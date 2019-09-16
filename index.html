@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/ref_Hunter.js" type="text/javascript"></script>
+	<script src="js/ref_Keyper.js" type="text/javascript"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	
+
+</head>
+<body>
+    	<h1>Monster of the Week Reference Guide</h1>
+	<select id="refKeyper" name="refKeyper" class="string">
+
+		<script>
+			var titles = GetAllTitlesAsArray;
+			titles.forEach(function(obj) {
+				
+				<option value="Keeper Agenda">Keeper Agenda</option>
+				
+				Titles.push(obj.Title);
+    		}); 
+		</script>
+
+		<option value="Keeper Agenda">Keeper Agenda</option>
+		<option value="Principles">Principles</option>
+
+	</select>
+    	<input type="button" value="Go!" onclick="get_Notes()">
+
+	<div id="output_Keyper"></div>
+
+
+</body>
+</html>
+<script>
+	function get_Notes(){
+		
+		//Get Challenge Rating
+		var stringRefKeyper = document.getElementById("refKeyper").value;
+
+		document.getElementById("output_Keyper").innerHTML = GetNotes(stringRefKeyper);
+	}	
+	
+</script>
